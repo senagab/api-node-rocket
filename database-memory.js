@@ -5,7 +5,7 @@ export class DatabaseMemory {
     #videos = new Map()
 
     list() {
-        return this.#videos.values
+        return this.#videos.values()
     }
 
     create(video) {
