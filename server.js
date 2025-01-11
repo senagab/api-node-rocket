@@ -2,7 +2,7 @@ import { createServer } from 'node:http'
 
 const server = createServer((request, response) => {
     // console.log('oi')
-    response.write('oi')
+    response.write('buon giorno')
 
     return response.end()
 })
