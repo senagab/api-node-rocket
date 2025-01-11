@@ -1,27 +1,21 @@
-// import { createServer } from 'node:http'
-
-// const server = createServer((request, response) => {
-//     // console.log('oi')
-//     response.write('buon giorno')
-
-//     return response.end()
-// })
-
-// server.listen(3333)
-
 import { fastify } from 'fastify'
+import { DatabaseMemory } from './database-memory.js'
 
 const server = fastify()
 
-server.get('/', () => { // rota: quando o usuario chamar o endereço raiz
+server.post('/videos', () => { // rota para criar video
     return 'Hello World'
 }) 
 
-server.get('/123', () => { // rota: quando o usuario chamar o endereço raiz
+server.get('/videos', () => {
     return 'Hello 123'
 }) 
 
-server.get('/pkg', () => { // rota: quando o usuario chamar o endereço raiz
+server.put('/videos/:id', () => { // rota para atualizar video
+    return 'This are your packages'
+}) 
+
+server.delete('/videos/:id', () => { // rota para deleção
     return 'This are your packages'
 }) 
 
