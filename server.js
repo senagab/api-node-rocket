@@ -43,9 +43,14 @@ server.put('/videos/:id', (request, reply) => { // rota para atualizar video
 
 }) 
 
-server.delete('/videos/:id', () => { // rota para deleção
-    return 'This are your packages'
-}) 
+server.delete('/videos/:id', (request, reply) => {
+    const videoId = request.params.id
+
+    database.delete(videoId)
+
+    
+    return reply.status(204).send()
+})
 
 server.listen({
     port: 3333,
