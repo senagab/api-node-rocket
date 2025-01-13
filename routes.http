@@ -1,1 +1,25 @@
+# cadastro de video
 POST http://localhost:3333/videos
+Content-type: application/json
+
+{
+    "title": "video 01",
+    "description": "este é o video 01",
+    "duration": 180
+}
+
+###
+
+GET http://localhost:3333/videos
+
+###
+
+# busca de video
+PUT http://localhost:3333/videos/
+Content-type: application/json
+
+{
+    "title": "video 02",
+    "description": "este é o video 01",
+    "duration": 180
+}
