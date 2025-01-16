@@ -1,4 +1,4 @@
-# API em Desenvolvimento
+# Video Upload Manager API
 
 <p align="left">
     <img src="https://img.shields.io/badge/node-v22.10.6-green?logo=node.js&labelColor=black" alt="Node.js version">
@@ -6,6 +6,14 @@
     <img src="https://img.shields.io/badge/postgres-v3.4.5-blue?labelColor=black" alt="Postgres version">
 </p>
 
-Neste projeto são realizadas as seguintes ações:
-- Criação do primeiro servidor HTTP nativo
-- Criação de Script de otimização para fluxo de desenvolvimento (flag --watch)
+<b>Neste projeto foi realizado:</b>
+
+- Criação de servidor HTTP nativo
+- Criação de API REST
+- Fastify
+- CRUD
+    - Rotas
+    - Request Body
+    - Route parameters
+    - Query parameters
+- Banco de dados em memória (produção)
