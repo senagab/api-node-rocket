@@ -17,3 +17,4 @@
     - Route parameters
     - Query parameters
 - Banco de dados em memória (produção)
+- Banco de dados Postgres (Neon)
