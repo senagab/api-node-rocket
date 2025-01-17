@@ -1,16 +1,18 @@
 import { fastify } from 'fastify'
-import { DatabaseMemory } from './database-memory.js'
+// import { DatabaseMemory } from './database-memory.js'
+import { DatabasePostgres } from './database-postgres.js'
 
 const server = fastify()
 
-const database =new DatabaseMemory()
+// const database =new DatabaseMemory()
+const database = new DatabasePostgres()
 
-server.post('/videos', (request, reply) => { // rota para criar video
+server.post('/videos', async (request, reply) => { // rota para criar video
     
     // corpo da requisição
     const { title, description, duration } = request.body // desestruturação de metadados
 
-    database.create({
+    await database.create({
         title,
         description,
         duration
@@ -21,11 +23,11 @@ server.post('/videos', (request, reply) => { // rota para criar video
     return reply.status(201).send()
 }) 
 
-server.get('/videos', (request) => {
+server.get('/videos', async (request) => {
 
     const search = request.query.search
 
-    const videos = database.list(search)
+    const videos = await database.list(search)
 
     return videos
 }) 
