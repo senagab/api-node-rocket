@@ -8,7 +8,7 @@ export class DatabasePostgres {
         let videos
 
         if (search) {
-            videos = sql`select * from videos where title ilike "%${search}%"`
+            videos = sql`select * from videos where title ilike "${'%' + search + '%'}"`
         } else {
             videos = sql`select * from videos`
         }
