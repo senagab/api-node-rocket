@@ -1,5 +1,5 @@
 # cadastro de video
-POST http://localhost:3333/videos
+POST https://api-node-videos.onrender.com/videos
 Content-type: application/json
 
 {
@@ -10,13 +10,13 @@ Content-type: application/json
 
 ###
 
-GET http://localhost:3333/videos
-# GET http://localhost:3333/videos?search=node
+GET https://api-node-videos.onrender.com/videos
+# GET https://api-node-videos.onrender.com/videos?search=node
 
 ###
 
 # busca de video
-PUT http://localhost:3333/videos/83791b6e-ca25-4694-81a2-46606eb17da7
+PUT https://api-node-videos.onrender.com/videos/6c840450-669c-471b-a348-0f5db153efab
 Content-type: application/json
 
 {
@@ -26,4 +26,4 @@ Content-type: application/json
 }
 
 ###
-DELETE http://localhost:3333/videos/83791b6e-ca25-4694-81a2-46606eb17da7
+DELETE https://api-node-videos.onrender.com/videos/6c840450-669c-471b-a348-0f5db153efab
